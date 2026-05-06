@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFront - Portfolio & Soluções Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="caixa-img">
+        <img src="./img/DevFront.png" alt="Fundo DevFront">
+        <div class="mascara"></div>
+    </div>
+
+    <div onclick="toggleContato(false)" id="mascara-modal" class="mascara2"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="./img/Logo cabeça.png" class="header-img" alt="Logo DevFront">
+            <h1 class="logo-titulo">DEV FRONT</h1>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <button onclick="toggleContato(true)" class="link-contato-nav">Contato</button>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+
+        <section id="inicio" class="hero-section scroll-reveal">
+            <div class="hero-content">
+                <h2>Desenvolvedor Front End</h2>
+                <div class="text-box">
+                    <div class="text-info">
+                        <h3>Por que investir em um site profissional?</h3>
+                        <p>Em um mercado competitivo, não basta apenas "estar na internet". É preciso oferecer uma
+                            experiência de qualidade.</p>
+                        <ul>
+                            <li><strong>Credibilidade:</strong> Passa confiança imediata para quem procura seus
+                                serviços.</li>
+                            <li><strong>Visibilidade:</strong> Com técnicas de SEO, sua empresa aparece para quem
+                                realmente interessa.</li>
+                            <li><strong>Controle Total:</strong> No seu site você dita as regras, o design e a jornada
+                                do cliente.</li>
+                        </ul>
+                    </div>
+                    <div class="hero-logo">
+                        <img src="./img/Logo.png" alt="Logo DevFront">
+                    </div>
+                </div>
+                <div class="botao-container">
+                    <button onclick="toggleContato(true)" class="botao-contato">Entre em Contato</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre-section scroll-reveal">
+            <div class="sobre-card">
+                <div class="foto-container">
+                    <img src="./img/minha foto.png" alt="Glaucinei - DevFront" class="minha-foto">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Sobre Mim</h2>
+                    <p id="texto-sobre">
+                        Me chamo Glaucinei, estou na área de programação desde fevereiro de 2026, focado na formação
+                        DevClub.
+                        Meu intuito é ajudar tanto a mim, através da prática de projetos reais, quanto a pequenos
+                        empreendedores que buscam alavancar seus negócios com sites profissionais de conversão,
+                        oferecendo alta qualidade por um investimento acessível.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section scroll-reveal">
+            <h2 class="secao-titulo">Meus Projetos</h2>
+            <div class="exemplo-portfolio">
+
+                <article class="projeto-card">
+                    <div class="projeto-img-wrapper">
+                        <a href="https://devfrontsites-byte.github.io/A.M-Elegance/" target="_blank">
+                            <img src="./img/Elegace.png" alt="Projeto A.M Elegance">
+                        </a>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>A.M Elegance</h3>
+                        <p>Landing page para o setor de joalheria focada em branding e conversão. Design minimalista,
+                            código limpo e abordagem mobile-first.</p>
+                    </div>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-img-wrapper">
+                        <a href="https://devfrontsites-byte.github.io/meu-primeiro-projeto/" target="_blank">
+                            <img src="./img/Novo Site Anuncio (Post para Instagram).png" alt="Projeto Conversão">
+                        </a>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Site de Vendas Express</h3>
+                        <p>Modelo estratégico focado no público empreendedor para afunilar vendas de serviços e capturar
+                            leads quentes com baixo custo.</p>
+                    </div>
+                </article>
+
+                <article class="projeto-card">
+                    <div class="projeto-img-wrapper">
+                        <a href="https://devfrontsites-byte.github.io/Barbearia/" target="_blank">
+                            <img src="./img/barbearia.png" alt="Projeto Conversão">
+                        </a>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Transforme sua Barbearia em uma Máquina de Agendamentos!</h3>
+                        <p>O Problema: Hoje, quem não é visto no Google ou não tem um link profissional na bio, perde
+                            espaço para a concorrência.A Solução: Um site exclusivo, moderno e direto ao ponto para o
+                            seu negócio.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <form id="form-contato" class="form-contato" action="https://formcarry.com/s/nsjetjBm0Wo" method="POST"
+        enctype="multipart/form-data">
+        <button type="button" class="fechar-modal" onclick="toggleContato(false)">&times;</button>
+        <h3>Fale Conosco</h3>
+        <input placeholder="Seu Nome" type="text" name="Nome" required>
+        <input placeholder="Telefone" type="tel" name="Telefone" required>
+        <textarea placeholder="Me conte o que precisa..." name="Assunto" required></textarea>
+        <button type="submit" class="botao-form">Pedir Orçamento</button>
+    </form>
+
+    <div class="caixa-rede">
+        <a href="https://wa.link/dexj45" target="_blank" aria-label="WhatsApp">
+            <img src="./img/whatsapp.png" class="rede-icon" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/glaucinei_santana/" target="_blank" aria-label="Instagram">
+            <img src="./img/10000221.png" class="rede-icon" alt="Instagram">
+        </a>
+    </div>
+
+    <script src="scripts.js" defer></script>
+</body>
+
+</html>
