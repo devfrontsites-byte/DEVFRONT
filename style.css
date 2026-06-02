@@ -481,28 +481,7 @@ body {
     box-shadow: 0 0 15px #fff;
 }
 
-/* REDES SOCIAIS FLUTUANTES */
-.caixa-rede {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 90;
-}
 
-.rede-icon {
-    width: 55px;
-    height: 55px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-}
-
-.rede-icon:hover {
-    transform: scale(1.15) translateY(-3px);
-    filter: drop-shadow(0 0 8px var(--primary-color));
-}
 
 /* ANIMAÇÃO DE REVEAL AO SCROLLAR */
 .scroll-reveal {
@@ -576,4 +555,116 @@ body {
         width: 220px;
         height: 220px;
     }
+}
+
+/* ==========================================================================
+   BOTÃO ANIMADO DO WHATSAPP (PÓS-PORTFÓLIO)
+   ========================================================================== */
+.cta-whatsapp-container {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.btn-whatsapp-anim {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+}
+
+.btn-whatsapp-anim:hover {
+    background-color: #20ba5a;
+    transform: scale(1.05);
+}
+
+/* Animação de pulso suave para chamar atenção */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ)
+   ========================================================================== */
+.footer-sections {
+    background-color: #111; /* Cor escura elegante */
+    color: #fff;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid #222;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* Ajuste para telas maiores (Desktop) */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Ícones Sociais no Footer */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #222;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon.insta:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.whats:hover {
+    background-color: #25d366;
 }
